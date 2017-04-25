@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700')
+@font-face
+  font-family: SourceSansPro
+  src: url('https://fonts.googleapis.com/css?family=Source+Sans+Pro')
+
+$inline: inline
+
+%font-fam
+  font-family: 'Source Sans Pro', sans-serif
+
+%font-143-14-600
+  @extend %font-fam
+  line-height: 1.43
+  font-size: 14px
+  font-weight: 600
+
+// colors var
+$white: #fff
+$black: #36364d
+$no-background: transparent
+$blue-light: #0088cc
+$hover_blue: #e6f7ff
+
+body
+  background-image: linear-gradient(to bottom, #25a3e7, #0b79c1)
+  background-repeat: no-repeat
+  height: 800px // временно, для полноты отображения страницы
+
+%hover-nav_ext
+  color: $white
+  opacity: 0.7
+  background: $no-background
+
+nav.navbar
+  margin-top: 32px
+
+.navbar-brand
+  width: 146px
+  height: 34px
+  margin-right: 100px
+
+.main-menu
+  margin-top: 1.5%
+  > li
+    padding-left: 34px
+
+.nav
+  > li
+    display: $inline
+  > li a
+    display: $inline
+    @extend %font-143-14-600
+    font-weight: bold
+    color: $white
+    margin: 0 auto
+    &:hover
+      @extend %hover-nav_ext
+    &:focus
+      @extend %hover-nav_ext
+    &:active
+      @extend %hover-nav_ext
+
+.nav .open > a
+  background-color: $no-background
+  &:hover
+    background-color: $no-background
+  &:focus
+    background-color: $no-background
+
+.btn
+  padding: 6px 3px 6px 3px
+  margin-right: 16px
+
+.btn.login
+  border-radius: 3px
+  border: solid 1px rgba(255,255,255,0.3)
+
+.btn.register
+  border-radius: 2px
+  background-color: #00d34d
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08)
+
+.mega-dropdown
+  position: static !important
+
+%hover-mega_ext
+  text-decoration: none
+  color: $blue-light
+  background-color: $hover_blue
+  padding: 8px 12px 8px 12px
+  border-radius: 4px
+
+.mega-dropdown-menu
+  padding: 20px 0
+  width: 780px
+  border-radius: 4px!important
+  border: none
+  background-color: $white
+  box-shadow: 0 10px 30px 0 rgba(9,73,102,0.18)
+  margin-left: 11%
+  top: 46px
+  &:before
+    content: ""
+    border-bottom: 11px solid $white
+    border-right: 11px solid $no-background
+    border-left: 11px solid $no-background
+    position: absolute
+    top: -11px
+    left: 44%
+    z-index: 10
+  > li
+    > ul
+      padding: 0
+      margin: 0
+      > li
+        list-style: none
+        > a
+          margin: 8px 0px 8px 42px
+          display: block
+          padding: 8px 12px 8px 12px
+          clear: both
+          @extend %font-143-14-600
+          white-space: normal
+          color: $blue-light
+          font-weight: normal
+          &:hover
+            @extend %hover-mega_ext
+          &:focus
+            @extend %hover-mega_ext
+        & > h2
+          margin: 8px 0px 8px 35px
+          color: #616773
+          padding: 3px 20px
+          @extend %font-143-14-600
+        & > img
+          margin: 8px 0px 8px 54px
+        & > ul
+          list-style: circle
+          margin: 8px 0px 8px 30px
+          > li
+            padding-bottom: 20px
+            @extend %font-fam
+            line-height: 1.5
+            color: #8d95a6
+            font-size: 12px
+        & > a.url
+          @extend %font-143-14-600
+          color: #0091d9
+          &:hover
+            background-color: $no-background
+
+.dropdown-header
+  padding-top: 28px
+  color: $black
+  @extend %font-fam
+  text-align: left
+  line-height: 1.5
+  font-size: 16px
+  font-weight: 600
+  &:before
+    content: url('icon-menu.svg')
+    display: inline-block
+    text-align: center
+    font-size: 1em
+    width: 24px
+    height: 24px
+    border-radius: 100%
+    margin-right: 10px
+
+.category:before
+  background-color: #f39c12
+
+.reward:before
+  background-color: #e74c3c
+
+.recomm:before
+  background-color: #2ecc71
+
+.cards:before
+  background-color: #3498db
+
+
+
+
+
+

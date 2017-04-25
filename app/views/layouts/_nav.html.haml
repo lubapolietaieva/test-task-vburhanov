@@ -1,0 +1,87 @@
+%nav.navbar
+  .navbar-header
+    %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#nav-collapse", "data-toggle" => "collapse", :type => "button"}
+      %span.sr-only Toggle navigation
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    %a.navbar-brand{:href => '#'}
+      =image_tag 'logo.svg'
+  #nav-collapse.collapse.navbar-collapse
+    %ul.nav.navbar-nav.main-menu
+      %li
+        %a{:href => '#'} PRODUCTS
+      %li.dropdown.mega-dropdown
+        %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => '#', :role => "button"} CREDIT CARDS
+        %ul.dropdown-menu.mega-dropdown-menu.row
+          %li.col-sm-4
+            %ul
+              %li.dropdown-header.category Card Categories
+              %li
+                %a{:href => "#"} Best Credit Cards for You
+              %li
+                %a{:href => "#"} Balance Transfer Car
+              %li
+                %a{:href => "#"} Low Intro Rate Cards
+              %li
+                %a{:href => "#"} No Annual Fee Cards
+              %li
+                %a{:href => "#"} Instant Decision Cards
+              %li
+                %a{:href => "#"} Best Prepaid Cards
+              %li.dropdown-header.reward Reward Cards
+              %li
+                %a{:href => "#"} Cash Back Cards
+              %li
+                %a{:href => "#"} Airlines Cards
+              %li
+                %a{:href => "#"} Gasonline Cards
+              %li
+                %a{:href => "#"} Hotel Rewards Cards
+          %li.col-sm-4
+            %ul
+              %li.dropdown-header.recomm Recommended by Experts
+              %li
+                %h2 Emporium Black Card
+              %li
+                =image_tag 'credit_card.svg'
+              %li
+                %ul
+                  %li Less than Perfect Credit Accepted. Approval is quick and easy. Must be 18 years or older, have a valid checking account and a verifiable source of income.
+                  %li No Hidden Fees
+              %li
+                %a.url{:href => "#"}
+                  All recommended cards
+                  %i.fa.fa-arrow-right
+          %li.col-sm-4
+            %ul
+              %li.dropdown-header.cards Cards by Issuer
+              %li
+                %a{:href => "#"}
+                  =image_tag 'visa.svg'
+                  Visa®
+              %li
+                %a{:href => "#"}
+                  =image_tag 'mastercard.svg'
+                  MasterCard®
+              %li
+                %a{:href => "#"}
+                  =image_tag 'american.svg'
+                  American Express®
+              %li
+                %a{:href => "#"}
+                  =image_tag 'discover.svg'
+                  Discover®
+      %li
+        %a{:href => '#'} COMPANY
+      %li
+        %a{:href => '#'}
+          BLOG
+          %i.fa.fa-arrow-right
+    %ul.nav.navbar-nav.navbar-right
+      %li.btn.navbar-btn.login
+        %a{:href => '#'} LOGIN
+      %li.btn.navbar-btn.register
+        %a{:href => '#'}
+          %i.fa.fa-user
+          REGISTER
